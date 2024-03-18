@@ -95,7 +95,7 @@ document.getElementById('subtotal').addEventListener('click', function(event) {
     let subTotal = parseFloat(document.getElementById('inputSub').value);
     let tip = parseFloat(document.getElementById('inputTip').value);
     
-    if (isNaN(subTotal) || isNaN(tip)) 
+       if (isNaN(subTotal) || isNaN(tip) || tip > 100 || subTotal < 0) 
         document.getElementById('result').textContent = "Please enter valid numbers for subtotal and tip.";
      else 
         document.getElementById('result').textContent = "Your total is: " + getTotal(subTotal, tip).toFixed(2)+ " your tip amount is: "+ (getTotal(subTotal, tip).toFixed(2)-subTotal).toFixed(2);
