@@ -36,10 +36,10 @@ document.getElementById('checkButton').addEventListener('click', function(event)
     if (consonants(userInput) > 1) consonant += 's';
     if (Vowels(userInput) > 1) vowel+='s';
 
-  if (Vowels(userInput) > 0 && consonants(userInput) > 0) 
+   if (Vowels(userInput) > 0 && consonants(userInput) > 0) 
     document.getElementById('result3').textContent = "'" +userInput + "'" + " has " + Vowels(userInput) + " " + vowel + " " + " and " + consonants(userInput) + " " + consonant;
     else if (Vowels(userInput) > 0)
-    document.getElementById('result3').textContent = "'" +userInput + "'" + " has " + Vowels(userInput) + " vowels " + ", " + consonants(userInput) + " consonants"; 
+    document.getElementById('result3').textContent = "'" +userInput + "'" + " has " + Vowels(userInput) + " "+ vowel + ", " + consonants(userInput) + " consonants"; 
     else if (consonants(userInput) > 0) 
     document.getElementById('result3').textContent = "'" +userInput + "'" + " has " + consonants(userInput) + " " + consonant + ", " + Vowels(userInput) + " vowels"; 
     else
